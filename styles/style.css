@@ -3,8 +3,24 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgba(145, 150, 153, 0.434);
+    cursor: none;
   }
   
+  .varita {
+    width: 38px; /* Ajusta el ancho de la varita */
+    height: 38px; /* Ajusta la altura de la varita */
+    position: absolute;
+    pointer-events: none; /* Hace que la imagen de la varita no interfiera con otros elementos */
+}
+
+#particles-js {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
   header {
     background-color: #343a40;
     color: white;
