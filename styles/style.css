@@ -1,17 +1,20 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: rgba(145, 150, 153, 0.434);
-    cursor: none;
-  }
-  
-  .varita {
-    width: 38px; /* Ajusta el ancho de la varita */
-    height: 38px; /* Ajusta la altura de la varita */
-    position: absolute;
-    pointer-events: none; /* Hace que la imagen de la varita no interfiera con otros elementos */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(145, 150, 153, 0.434);
+  /*cursor: none; */
+}
+
+.varita {
+  width: 38px;
+  /* Ajusta el ancho de la varita */
+  height: 38px;
+  /* Ajusta la altura de la varita */
+  position: absolute;
+  pointer-events: none;
+  /* Hace que la imagen de la varita no interfiera con otros elementos */
 }
 
 #particles-js {
@@ -21,44 +24,143 @@ body {
   z-index: -1;
 }
 
-  header {
-    background-color: #343a40;
-    color: white;
-    padding: 1em 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin: 0 1em;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  main {
-    padding: 2em;
-    text-align: center;
-  }
-  
-  .intro {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
+header {
+  background-color: #343a40;
+  color: white;
+  padding: 1em 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 2em;
+  text-align: center;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/*Estilos cuadros-----------------------------------------------*/
+
+.cont-principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 550px;
+  background-image: url(../Image/fondo2.jpg);
+  background-size: cover;
+}
+
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 450px;
+  height: 400px;
+  border-radius: 20px;
+
+
+}
+
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .5s;
+  display: flex;
+  justify-content: center;
+}
+
+.card .front {
+  transform: perspective(600px) rotatey(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+  position: absolute;
+  width: 96%;
+  height: 96%;
+  object-fit: cover;
+  background-color: wheat;
+  margin: 10px;
+}
+
+.card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0, 0, 0, .4);
+  text-align: center;
+}
+
+.card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(3, 35, 54);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+  border-top: solid 1px #f3f3f3;
+  height: 50px;
+  line-height: 50px;
+}
+
+.card .back .link a {
+  color: #f3f3f3;
+}
+
+.card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  letter-spacing: 1px;
+}
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
