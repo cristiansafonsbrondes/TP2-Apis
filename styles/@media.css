@@ -6,6 +6,9 @@
     .cont-principal {
         justify-content: space-evenly;
     }
+    footer {
+        position: relative;
+    }
 }
 
 @media only screen and (max-width: 767px) and (min-width: 480px) {
@@ -379,6 +382,12 @@
         height: 100%;
     }
 
+    .grid .tarjetas .parteB {
+        height: 270px;
+        margin-bottom: 5px;
+        border-radius: 0 0 20px 0px;
+    }
+
     .grid .tarjetas .parteB li {
         padding-left: 10px;
         font-size: 13px;
@@ -388,6 +397,7 @@
 
     .grid .tarjetas .parteB #actor {
         font-size: 13px;
+        padding-top: 0;
     }
 
     h4 {
@@ -402,7 +412,7 @@
 
     /*----PERSONAJES SECUNDARIOS------------------------------------*/
     .grid2 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .grid2 .tarjetas2 {
@@ -468,14 +478,14 @@
     }
 
     .grid .tarjetas .parteB {
-        height: 240px;
+        height: 220px;
         margin-bottom: 5px;
         border-radius: 0 0 20px 20px;
     }
 
     .grid .tarjetas .parteB li {
         padding-left: 10px;
-        font-size: 11px;
+        font-size: 10px;
         margin-bottom: 5px;
         margin-top: 5px;
     }
